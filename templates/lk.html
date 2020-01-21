@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> Hello, it's lk </h1>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+          <h5 class="card-title">{{user.name}} {{user.secondname}}</h5>
+    <p class="card-text">Какая-то информация</p>
+  </div>
+  <ul class="list-group list-group-flush">
+          <li class="list-group-item">Почта: {{user.email}}</li>
+          <li class="list-group-item">Город: {{user.city}}</li>
+          <li class="list-group-item">Телефон: {{user.phone}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Что-то</a>
+    <a href="#" class="card-link">Куда-то</a>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}

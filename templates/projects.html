@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-md-center">
+<ul class="nav">
+  <li class="nav-item">
+        <a class="nav-link active" href="#">Технологи</a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" href="#">IT</a>
+  </li>
+  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Исследования
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Научные</a>
+                <a class="dropdown-item" href="#">Социальные</a>
+                <a class="dropdown-item" href="#">Экономические</a>
+                <a class="dropdown-item" href="#">другие</a>
+        </div>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" href="#">Бизнес</a>
+  </li>
+</ul>
+</div>
+
+
+<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Создать проект</a>
+
+<div class="container">
+        <h1> Все проекты  </h1>
+        <h5> Помогай миру двигаться вперед!</h5>
+<div>
+
+{% for project in projects %}
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+              <h4 class="card-title">{{ project.name }}</h4>
+        <h5 class="card-title">75.000</h5>
+        <p class="card-text">Задание задание задание задание задание задание.</p>
+        <a href="#" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Пятерочка</h4>
+        <h5 class="card-title">Работа</h5>
+        <p class="card-text">Задание задание задание задание задание задание.</p>
+        <a href="#" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Правительство Удмуртии</h4>
+        <h5 class="card-title">Знание</h5>
+        <p class="card-text">Задание задание задание задание задание задание.</p>
+        <a href="#" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}
